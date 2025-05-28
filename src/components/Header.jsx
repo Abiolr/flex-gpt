@@ -1,8 +1,8 @@
 export default function Header () {
     return (
-        <div>
+        <header>
             <img className="logo" src="src/assets/logo.png" alt="logo"/>
-            <h1>FlexGPT</h1>
-        </div>
+            <p>FlexGPT</p>
+        </header>
     )
 }
