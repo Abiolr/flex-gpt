@@ -1,12 +1,17 @@
+import { useState } from "react"
+
 export default function Main () {
-    const equipmentItems = ["dumbells", "pull-up bar", "kettle bell"]
+    const [equipmentItems, setEquipmentItems] = useState([])
     
     const listEquipmentItems = equipmentItems.map((equipmentItem) =>
         <li key={equipmentItem}>{equipmentItem}</li>)
 
     function submitForm(event) {
         event.preventDefault()
-        console.log("Form freaking submitted!")
+        const formData = new FormData(event.currentTarget)
+        const newEquipmentItem = formData.get("equipmentItem").trim()
+        if (newEquipmentItem != "")
+            setEquipmentItems(prevItems => [...prevItems, newEquipmentItem])
     }
 
     return (
@@ -16,7 +21,7 @@ export default function Main () {
                     type="text"
                     placeholder="e.g. dumbbells"
                     aria-label="add equipment"
-                    name="equipment"/>
+                    name="equipmentItem"/>
                 <button>Add equipment</button>
             </form>
             <ul>{listEquipmentItems}</ul>
