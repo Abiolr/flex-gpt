@@ -1,11 +1,28 @@
+/* Add viewport meta tag to your index.html file:
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+This should go in the <head> section of your HTML file. */
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: #1e293b;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   font-family: Inter, sans-serif;
-  background-color: #FAFAF8;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
+  background-color: #1e293b;
+  color: #e2e8f0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
@@ -14,55 +31,419 @@ header {
   align-items: center;
   font-family: 'Inter', sans-serif;
   gap: 15px;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 
+    0px 4px 20px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 0px rgba(59, 130, 246, 0.1);
+  padding: 15px 0;
 }
 
-header p {
+header > p {
   font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  letter-spacing: -0.02em;
 }
 
 .logo {
   height: 60px;
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
 }
 
-main{
-  padding: 30px 30px 10px;
+main {
+  padding: 40px 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 .equipment-form {
   display: flex;
   justify-content: center;
   gap: 12px;
-  height: 38px;
+  height: 48px;
+  margin-bottom: 30px;
 }
 
 .equipment-form > input {
-    border-radius: 6px;
-    border: 1px solid #D1D5DB;
-    padding: 9px 13px;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    flex-grow: 1;
-    min-width: 150px;
-    max-width: 400px;
-    
+  border-radius: 8px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  color: #e2e8f0;
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 800PX;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0px 4px 12px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 1px 3px 0px rgba(59, 130, 246, 0.1);
+  -webkit-appearance: none;
+  -webkit-border-radius: 8px;
+}
+
+.equipment-form > input:focus {
+  outline: none;
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 
+    0px 6px 20px 0px rgba(0, 0, 0, 0.3),
+    0px 0px 0px 3px rgba(59, 130, 246, 0.2),
+    inset 0px 1px 3px 0px rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+.equipment-form > input::placeholder {
+  color: #64748b;
 }
 
 .equipment-form > button {
   font-family: Inter, sans-serif;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
-  background-color: #141413;
-  color: #FAFAF8;
-  width: 150px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #ffffff;
+  width: 160px;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0px 4px 12px 0px rgba(59, 130, 246, 0.3),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -webkit-appearance: none;
+  -webkit-border-radius: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.equipment-form > button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 
+    0px 8px 25px 0px rgba(59, 130, 246, 0.4),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.equipment-form > button:active {
+  transform: translateY(0px);
+  box-shadow: 
+    0px 2px 8px 0px rgba(59, 130, 246, 0.3),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
 }
 
 .equipment-form > button::before {
   content: "+";
-  margin-right: 5px;
+  margin-right: 8px;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
-/**
-header box shadow code:
-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-*/
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.genWorkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 
+    0px 8px 32px 0px rgba(0, 0, 0, 0.3),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05);
+}
+
+.genWorkout div {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.genWorkout h1 {
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.genWorkout p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.genWorkout button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 28px;
+  font-family: Inter, sans-serif;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0px 6px 20px 0px rgba(6, 182, 212, 0.3),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.genWorkout button:hover {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  transform: translateY(-2px);
+  box-shadow: 
+    0px 10px 30px 0px rgba(6, 182, 212, 0.4),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.genWorkout button:active {
+  transform: translateY(0px);
+  box-shadow: 
+    0px 4px 15px 0px rgba(6, 182, 212, 0.3),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+li > button:hover {
+  transform: scale(1.5);
+  color: #ed5353;
+}
+
+li:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateX(4px);
+  box-shadow: 
+    0px 4px 15px 0px rgba(0, 0, 0, 0.3),
+    0px 0px 0px 1px rgba(59, 130, 246, 0.1);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: none;
+  }
+  
+  header {
+    padding: 12px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header p {
+    font-size: 28px;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  main {
+    padding: 30px 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .equipment-form {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  
+  .equipment-form > input {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+  
+  .equipment-form > button {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .genWorkout {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+    margin: 30px 0;
+  }
+  
+  .genWorkout div {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .genWorkout h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .genWorkout p {
+    font-size: 15px;
+  }
+  
+  .genWorkout button {
+    width: 100%;
+    height: 52px;
+    font-size: 1rem;
+  }
+  
+  li {
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    min-height: 50px;
+    box-sizing: border-box;
+  }
+  
+  li > button {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    min-width: 32px;
+  }
+}
+
+.renderHeader {
+  font-size: 25px;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+  
+  header p {
+    font-size: 24px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  main {
+    padding: 20px 15px 15px;
+  }
+  
+  .equipment-form {
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .equipment-form > input {
+    height: 48px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  
+  .equipment-form > button {
+    height: 48px;
+    font-size: 0.95rem;
+  }
+  
+  .genWorkout {
+    padding: 20px 16px;
+    margin: 25px 0;
+  }
+  
+  .genWorkout div {
+    margin-bottom: 18px;
+  }
+  
+  .genWorkout h1 {
+    font-size: 22px;
+  }
+  
+  .genWorkout p {
+    font-size: 14px;
+  }
+  
+  .genWorkout button {
+    height: 48px;
+    font-size: 0.95rem;
+  }
+  
+  li {
+    padding: 16px;
+    font-size: 15px;
+    min-height: 48px;
+  }
+  
+  li > button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+}
