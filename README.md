@@ -2,6 +2,10 @@
 
 FlexGPT is an AI-powered fitness application that generates personalized workout routines based on your available equipment. Simply add the gym equipment you have at hand, and FlexGPT will create a customized workout plan just for you!
 
+## 🚀 Live Demo
+
+**Try FlexGPT now:** [https://flex-gpt-puce.vercel.app/](https://flex-gpt-puce.vercel.app/)
+
 ## 🌟 Features
 
 - **Equipment-Based Workouts**: Add any fitness equipment you own and get workouts tailored to what you have
@@ -15,14 +19,14 @@ FlexGPT is an AI-powered fitness application that generates personalized workout
 ## 📸 Screenshots
 
 ### Main Interface
-<img width="1470" alt="Screenshot 2025-05-28 at 11 53 46 PM" src="https://github.com/user-attachments/assets/f7401f67-b126-4bbf-8306-f18d83ced746" />
+<img width="1470" alt="Screenshot 2025-05-28 at 11 53 46 PM" src="https://github.com/user-attachments/assets/f7401f67-b126-4bbf-8306-f18d83ced746" />
 
 ### Equipment List
-<img width="1466" alt="Screenshot 2025-05-28 at 11 49 28 PM" src="https://github.com/user-attachments/assets/34ce67b0-2d72-47f9-b03e-921165cbe7b0" />
+<img width="1466" alt="Screenshot 2025-05-28 at 11 49 28 PM" src="https://github.com/user-attachments/assets/34ce67b0-2d72-47f9-b03e-921165cbe7b0" />
 
 ### Generated Workout
-<img width="1467" alt="Screenshot 2025-05-28 at 11 49 43 PM" src="https://github.com/user-attachments/assets/759722a0-74a8-4703-8036-b9a94ca4bd97" />
-<img width="1466" alt="Screenshot 2025-05-28 at 11 49 53 PM" src="https://github.com/user-attachments/assets/57c0a0c3-a9b1-43cd-8748-e92829591394" />
+<img width="1467" alt="Screenshot 2025-05-28 at 11 49 43 PM" src="https://github.com/user-attachments/assets/759722a0-74a8-4703-8036-b9a94ca4bd97" />
+<img width="1466" alt="Screenshot 2025-05-28 at 11 49 53 PM" src="https://github.com/user-attachments/assets/57c0a0c3-a9b1-43cd-8748-e92829591394" />
 
 ### Mobile View
 ![flex](https://github.com/user-attachments/assets/ce7b8900-ae0c-45ea-9788-5bf63ef5e371)
@@ -87,6 +91,7 @@ flex-gpt/
 ├── public/
 ├── src/
 │   ├── assets/
+│   │   ├── logo.png
 │   │   └── logo.png
 │   ├── components/
 │   │   ├── Header.jsx          # App header with logo

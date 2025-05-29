@@ -1,5 +1,5 @@
-import GitHubLink from "http://github.com/Abiolr"
-import LinkedinLink from "http://linkedin.com/in/abiola-raji/"
+const GitHubLink = "https://github.com/Abiolr"
+const LinkedinLink = "https://linkedin.com/in/abiola-raji/"
 
 export default function Footer() {
     return (
