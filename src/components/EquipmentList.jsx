@@ -17,7 +17,7 @@ export default function EquipmentList(props) {
                     <h1>Ready for a workout?</h1>
                     <p>Generate a workout based on your list of equipment </p>
                 </div>
-                <button onClick={props.showWorkout}>Generate workout</button>
+                <button onClick={props.getWorkout}>Generate workout</button>
             </div>
         </>
     )

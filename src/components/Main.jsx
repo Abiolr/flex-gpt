@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Workout from "./Workout"
 import EquipmentList from "./EquipmentList"
+import { getWorkoutFromFlexGPT } from "./ai"
 
 export default function Main () {
     const [equipmentItems, setEquipmentItems] = useState([])
@@ -17,10 +18,11 @@ export default function Main () {
         formElement.reset()
     }
 
-    const [workoutShown, setWorkoutShown] = useState(false)
+    const [workout, setWorkout] = useState("")
 
-    function showWorkout() {
-        setWorkoutShown(true)
+    async function getWorkout() {
+        const workoutMD = await getWorkoutFromFlexGPT(equipmentItems)
+        setWorkout(workoutMD)
     }
 
     return (
@@ -38,8 +40,8 @@ export default function Main () {
             <>
                 <EquipmentList
                     equipmentItems={equipmentItems}
-                    showWorkout={showWorkout}/>
-                {workoutShown && <Workout />}
+                    getWorkout={getWorkout}/>
+                {workout && <Workout workout={workout}/>}
             </>
             )}
         </main>
