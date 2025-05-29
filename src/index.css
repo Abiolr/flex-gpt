@@ -356,6 +356,14 @@ section strong {
   font-weight: 600;
 }
 
+footer {
+  background-color: #000000;
+}
+footer small {
+  display: flex;
+  justify-content: ;
+}
+
 @media (max-width: 768px) {
   html {
     -webkit-text-size-adjust: none;
