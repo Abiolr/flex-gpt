@@ -18,6 +18,8 @@ body {
   min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -33,6 +35,13 @@ header {
     0px 4px 20px 0px rgba(0, 0, 0, 0.3),
     0px 1px 3px 0px rgba(59, 130, 246, 0.1);
   padding: 15px 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 header > p {
@@ -55,6 +64,9 @@ main {
   padding: 40px 30px 20px;
   max-width: 800px;
   margin: 0 auto;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .equipment-form {
@@ -357,11 +369,46 @@ section strong {
 }
 
 footer {
-  background-color: #000000;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 
+    0px -4px 20px 0px rgba(0, 0, 0, 0.3),
+    0px -1px 3px 0px rgba(59, 130, 246, 0.1);
+  padding: 20px 30px;
+  margin-top: auto;
 }
+
 footer small {
   display: flex;
-  justify-content: ;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 14px;
+  text-align: center;
+}
+
+footer small div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #06b6d4;
+  text-decoration: underline;
+}
+
+footer span {
+  color: #64748b;
 }
 
 @media (max-width: 768px) {
@@ -387,8 +434,6 @@ footer small {
   
   main {
     padding: 30px 20px 20px;
-    width: 100%;
-    box-sizing: border-box;
   }
   
   .equipment-form {
@@ -479,10 +524,34 @@ footer small {
   section p {
     font-size: 15px;
   }
-}
 
-.renderHeader {
-  font-size: 25px;
+  .renderHeader {
+    font-size: 25px;
+  }
+
+  footer {
+    padding: 16px 20px;
+  }
+
+  footer small {
+    font-size: 13px;
+  }
+  
+  .equipment-form > button:active {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-1px);
+    box-shadow: 
+      0px 6px 20px 0px rgba(59, 130, 246, 0.4),
+      inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  
+  .genWorkout button:active {
+    background: linear-gradient(135deg, #0891b2, #0e7490);
+    transform: translateY(-1px);
+    box-shadow: 
+      0px 8px 25px 0px rgba(6, 182, 212, 0.4),
+      inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (max-width: 480px) {
@@ -573,5 +642,36 @@ footer small {
   
   section p {
     font-size: 14px;
+  }
+
+  footer {
+    padding: 14px 15px;
+  }
+  
+  footer small {
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  footer small div {
+    gap: 6px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .equipment-form > button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 
+      0px 8px 25px 0px rgba(59, 130, 246, 0.4),
+      inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  
+  .genWorkout button:hover {
+    background: linear-gradient(135deg, #0891b2, #0e7490);
+    transform: translateY(-2px);
+    box-shadow: 
+      0px 10px 30px 0px rgba(6, 182, 212, 0.4),
+      inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
   }
 }
