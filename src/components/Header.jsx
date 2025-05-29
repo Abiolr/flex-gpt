@@ -1,9 +1,11 @@
+import logoImg from "/public/logo.png"
+
 export default function Header () {
     return (
         <header>
             <img 
                 className="logo"
-                src="public/assets/logo.png"
+                src={logoImg}
                 alt="logo"
             />
             <p>FlexGPT</p>
