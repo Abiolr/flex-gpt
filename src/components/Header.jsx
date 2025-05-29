@@ -3,7 +3,7 @@ export default function Header () {
         <header>
             <img 
                 className="logo"
-                src="src/assets/logo.png"
+                src="public/assets/logo.png"
                 alt="logo"
             />
             <p>FlexGPT</p>
