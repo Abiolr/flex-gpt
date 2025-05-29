@@ -1,16 +1,9 @@
 import { useState } from "react"
+import Workout from "./Workout"
+import EquipmentList from "./EquipmentList"
 
 export default function Main () {
     const [equipmentItems, setEquipmentItems] = useState([])
-    
-    const listEquipmentItems = equipmentItems.map((equipmentItem) =>
-        <li key={equipmentItem}>{equipmentItem}
-            <button
-                aria-label="delete"
-            >
-                ⨉
-            </button>
-        </li>)
 
     function submitForm(event) {
         event.preventDefault()
@@ -22,6 +15,12 @@ export default function Main () {
                 [...prevItems, newEquipmentItem])
         }
         formElement.reset()
+    }
+
+    const [workoutShown, setWorkoutShown] = useState(false)
+
+    function showWorkout() {
+        setWorkoutShown(true)
     }
 
     return (
@@ -37,15 +36,10 @@ export default function Main () {
             </form>
             {equipmentItems.length > 0 && (
             <>
-                <h1 className="renderHeader">Equipment on hand:</h1>
-            <ul>{listEquipmentItems}</ul>
-            <div className="genWorkout">
-                <div>
-                    <h1>Ready for a workout?</h1>
-                    <p>Generate a full-body workout based on your list of equipment </p>
-                </div>
-                <button>Generate workout</button>
-            </div>
+                <EquipmentList
+                    equipmentItems={equipmentItems}
+                    showWorkout={showWorkout}/>
+                {workoutShown && <Workout />}
             </>
             )}
         </main>
