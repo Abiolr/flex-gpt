@@ -15,20 +15,17 @@ FlexGPT is an AI-powered fitness application that generates personalized workout
 ## 📸 Screenshots
 
 ### Main Interface
-<!-- Add screenshot of the main equipment input form -->
-*Screenshot placeholder: Main interface showing equipment input form*
+<img width="1470" alt="Screenshot 2025-05-28 at 11 53 46 PM" src="https://github.com/user-attachments/assets/f7401f67-b126-4bbf-8306-f18d83ced746" />
 
 ### Equipment List
-<!-- Add screenshot showing added equipment with delete buttons -->
-*Screenshot placeholder: Equipment list with added items and workout generation button*
+<img width="1466" alt="Screenshot 2025-05-28 at 11 49 28 PM" src="https://github.com/user-attachments/assets/34ce67b0-2d72-47f9-b03e-921165cbe7b0" />
 
 ### Generated Workout
-<!-- Add screenshot of a sample generated workout -->
-*Screenshot placeholder: Example of AI-generated workout with proper formatting*
+<img width="1467" alt="Screenshot 2025-05-28 at 11 49 43 PM" src="https://github.com/user-attachments/assets/759722a0-74a8-4703-8036-b9a94ca4bd97" />
+<img width="1466" alt="Screenshot 2025-05-28 at 11 49 53 PM" src="https://github.com/user-attachments/assets/57c0a0c3-a9b1-43cd-8748-e92829591394" />
 
 ### Mobile View
-<!-- Add screenshot of mobile responsive design -->
-*Screenshot placeholder: Mobile-responsive layout*
+![flex](https://github.com/user-attachments/assets/ce7b8900-ae0c-45ea-9788-5bf63ef5e371)
 
 ## 🚀 Getting Started
 
@@ -162,55 +159,6 @@ FlexGPT uses Claude AI (Haiku model) to generate workout routines. The AI:
 The application requires the following environment variable:
 
 - `VITE_API_KEY`: Your Anthropic API key for accessing Claude AI
-
-**Important**: Never commit your `.env` file to version control. The `.gitignore` file is already configured to exclude it.
-
-## 📦 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint code analysis
-
-## 🚀 Deployment
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-This creates a `dist` folder with optimized production files.
-
-### Deployment Options
-
-The app can be deployed to various platforms:
-
-- **Vercel**: Connect your repository for automatic deployments
-- **Netlify**: Drag and drop the `dist` folder or connect via Git
-- **GitHub Pages**: Use GitHub Actions for automated deployment
-- **Traditional Hosting**: Upload the `dist` folder contents
-
-**Important**: Remember to set your `VITE_API_KEY` environment variable in your deployment platform's settings.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📋 Future Enhancements
-
-- [ ] Workout history and favorites
-- [ ] User profiles and preferences
-- [ ] Exercise difficulty levels
-- [ ] Video exercise demonstrations
-- [ ] Social sharing features
-- [ ] Workout tracking and progress
-- [ ] Custom exercise database
-- [ ] Nutrition recommendations
 
 ## 📄 License
 
