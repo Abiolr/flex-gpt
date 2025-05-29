@@ -25,6 +25,15 @@ export default function Main () {
         setWorkout(workoutMD)
     }
 
+    function deleteEquipmentItem(indexToDelete) {
+        setEquipmentItems(prevItems => 
+            prevItems.filter((item, currentIndex) => {
+                return currentIndex !== indexToDelete
+            })
+        )
+        setWorkout("")
+    }
+
     return (
         <main>
             <form onSubmit={submitForm}
@@ -40,7 +49,8 @@ export default function Main () {
             <>
                 <EquipmentList
                     equipmentItems={equipmentItems}
-                    getWorkout={getWorkout}/>
+                    getWorkout={getWorkout}
+                    onDeleteItem={deleteEquipmentItem}/>
                 {workout && <Workout workout={workout}/>}
             </>
             )}
