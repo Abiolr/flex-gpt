@@ -1,4 +1,4 @@
-# FlexGPT 💪
+# FlexGPT: Home Workout Generator
 
 FlexGPT is an AI-powered fitness application that generates personalized workout routines based on your available equipment. Simply add the gym equipment you have at hand, and FlexGPT will create a customized workout plan just for you!
 
